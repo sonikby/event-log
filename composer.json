@@ -3,7 +3,7 @@
   "description": "event log",
   "type": "library",
   "require": {
-    "doctrine/annotations": "*",
+    "doctrine/annotations": "*"
   },
   "version": "1.0",
   "autoload": {
