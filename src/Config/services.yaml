@@ -1,0 +1,16 @@
+doctrine:
+  orm:
+    mappings:
+      otcstores_loggable:
+        type: annotation
+        prefix: Otcstores\EventLog\Doctrine
+        dir: "%otcstores.dir%/Doctrine/Collection"
+        alias: Otcstores
+        is_bundle: false
+
+services:
+  otcstores_eventLog_userData:
+    class: Otcstores\EventLog\User\UserData
+    arguments: ['@security.token_storage']
+
+  Otcstores\EventLog\User\InterfaceUserData: '@otcstores_eventLog_userData'
